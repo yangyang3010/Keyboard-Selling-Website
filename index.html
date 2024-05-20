@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="/yang/style.css">
+    <link rel="stytesheet" type="text/css" hrer="/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@700;800;900&dislay=swap"
+        rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/grid_system.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="./font/fontawesome-free-6.2.0-web/css/all.min.css"
+    />
+
+<body>
+    <div class="hau-container" id="root">
+        <script type="module" src="/js/index.js">
+        </script>
+    </div>
+    <div id="modal"></div>
+    <div class="hau-form-container" id="form">
+    </div>
+    <div class="hau-header">
+        <div class="hero">
+            <nav>
+                <h2 class="logo">Water<span>Yang</span></h2>
+                <div class="search">
+                    <div class="icon search"></div>
+                    <div class="input">
+                        <input type="text" placeholder="Search" id="mysearch">
+                    </div>
+                    <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
+                </div>
+                <ul>
+                    <li><a href="#" id="btn-home">Trang chủ</a></li>
+                    <li>
+                        <ul class="login-option">
+                            <li><a href="#" id="btn-nav-signup">Đăng kí</a></li>
+                            <li><a href="#" id="btn-nav-signin">Đăng nhập</a></li>
+                        </ul>
+                        <ul class="account-function">
+                            <!-- <li><button class="hau-func-btn" id="history-btn">History</button></li>
+                            <li><button class="hau-func-btn" id="profile-btn">Profile</button></li> -->
+                            <li><button class="hau-func-btn" id="logout-btn">Log out</button></li>
+                            <li class="admin-link"><a href="/admin/index.html">Go to admin</a></li>
+                        </ul>
+                        <script>
+                            function loginAuth(){
+                                if(JSON.parse(localStorage.getItem("currentaccounts")) != null &&
+                                JSON.parse(localStorage.getItem("currentaccounts")) != "null" ){
+                                    document.querySelector(".login-option").style.display = "none";
+                                    document.querySelector(".account-function").style.display = "inline-block";
+                                    if(!JSON.parse(localStorage.getItem("currentaccounts")).isadmin){
+                                        document.querySelector(".admin-link").style.display = "none";
+                                    }else{
+                                        document.querySelector(".admin-link").style.display = "inline-block";
+                                    }
+                                }else{
+                                    document.querySelector(".account-function").style.display = "none";
+                                    document.querySelector(".login-option").style.display = "inline-block";
+                                    console.log(JSON.parse(localStorage.getItem("currentaccounts")))
+                                    
+                                }
+                                
+
+                            }
+                            loginAuth();
+                            
+                            document.querySelector("#logout-btn").addEventListener("click", ()=>{
+                                localStorage.setItem("currentaccounts",JSON.stringify(null));
+                                loginAuth();
+                            });
+                        </script>
+                    </li>
+                </ul>
+                <button type="button" style="display: none;" id="show-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+            </nav>
+            <div class="brand-menu">
+                <ul>
+                    <li class="brand-menu-item current-brand"><a href="#">ALL</a></li>
+                    <li class="brand-menu-item"><a href="#">AKKO</a></li>
+                    <li class="brand-menu-item"><a href="#">DAREU</a></li>
+                    <li class="brand-menu-item"><a href="#">IQUNIX</a></li>
+                    <li class="brand-menu-item"><a href="#">LEOPOLD</a></li>
+                    <li class="brand-menu-item"><a href="#">LOGITECH</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <div class="slide first">
+                <img src="/yang/1.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/yang/2.gif" alt="">
+            </div>
+            <div class="slide">
+                <img src="/yang/3.gif" alt="">
+            </div>
+            <div class="slide">
+                <img src="/yang/4.jpg" alt="">
+            </div>
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+    <div class="hieu-root"></div>
+    <!-- <div class="pagecontent" id="productcontent"></div> -->
+    <script type="module" src="/yang/app2.js"></script>
+    <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>

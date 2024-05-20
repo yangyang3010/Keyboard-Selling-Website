@@ -1,0 +1,706 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --success-color: #2691d9;
+    --error-color: #e74c3c;
+    --black-color: #000;
+}
+
+.hau-form-container{
+    position: absolute;
+    top:0px;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(#f7a79c, #f6e5d5, #a5cec8);
+    overflow: hidden;
+    font-family: 'Merriweather', sans-serif;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.hau-form-container:has(.container),.hau-form-container:has(.container-2){
+    display: flex;
+    z-index: 15;
+}
+.hau-form-container:has(.container)~.hero{
+    display: none;
+}
+.hau-form-container:has(.container-2)~.hero{
+    display: none;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    /* height: 100vh; */
+    width: 100%;
+    background: linear-gradient(#b0e1fa, #fbf0ea);
+    /* background: linear-gradient(#f7a79c, #f6e5d5, #a5cec8); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2em;
+    padding-right: 3em;
+    /* justify-content: right; */
+    /* padding: 0px 16px; */
+}
+
+.logo {
+    /* padding-top: 2em; */
+    /* padding-left: 2em; */
+    color: black;
+    font-size: 28px;
+    text-align: left;
+    cursor: pointer;
+    padding-left: 5%;
+}
+
+span {
+    color: #ff0099;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    gap: 1.5em;
+}
+
+nav > * {
+    justify-content: end;
+}
+
+nav > h2.logo {
+    flex-grow: 1;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.5em 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff0099;
+    transition: .3s;
+}
+
+button {
+    border: none;
+    background: black;
+    padding: 1em 1.5em;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
+}
+
+button:hover{
+    cursor: pointer;
+    color: black;
+    background: #ff0099;
+}
+
+.brand-menu {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-top: 2em;
+    padding-right: 3em;
+}
+
+.brand-menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.55em 0.4em;
+    border: 1px solid black;
+    border-radius: 0.3em; 
+}
+
+.brand-menu ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.brand-menu ul li:hover {
+    background-color: #ff0099;
+    transition: .3s;
+    border: 1px solid #ff0099;
+
+}
+
+.brand-menu ul li a:hover {
+    color: white;
+}
+
+.slider {
+    width: 100%;
+    height: 500px;
+    /* border-radius: 10px; */
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 0.5s;
+}
+
+.slide img {
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #ff0099;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #ff0099;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div {
+    border: 2px solid #ff0099;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #ff0099;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #ff0099;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #ff0099;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: #ff0099;
+}
+
+.search {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    transition: 0.5s;
+    box-shadow: 0 0 0 3px black;
+    overflow: hidden;
+}
+
+.search.active {
+    width: 340px;
+}
+
+.search .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+    background: linear-gradient(#b0e1fa, #fbf0ea);
+}
+
+.search .icon::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    border-radius: 50%;
+    transform: translate(-4px,-4px);
+}
+
+.search .icon::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background: black;
+    transform: translate(6px,6px) rotate(315deg);
+}
+
+.search .input {
+    position: relative;
+    width: 300px;
+    height: 40px;
+    left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 15px;
+}
+
+.search .input input {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.clear {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    right: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear::before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 15px;
+    background: #999;
+    transform: rotate(45deg);
+}
+
+.clear::after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 15px;
+    background: #999;
+    transform: rotate(315deg);
+}
+
+body.hide-body {
+    display: none;
+}
+
+.container {
+    display: block;
+    width: 400px;
+    border: none;
+    border-radius: 75px;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 40px;
+}
+
+.container-2 {
+    display: block;
+    width: 600px;
+    border: none;
+    border-radius: 75px;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 40px;
+}
+
+.container.hide-container {
+    display: none;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.container-2 h1 {
+    text-align: center;
+}
+
+.form-control {
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+}
+
+.form-control input {
+    padding: 15px;
+    font-family: 'Merriweather', sans-serif;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.form-control span {
+    position: absolute;
+    border-radius: 20px;
+    left: 0;
+    top: 38px;
+    width: 0%;
+    transition: 0.3s;
+}
+
+.form-control input:focus ~ span {
+    width: 100%;
+}
+
+.form-control.error small {
+    color: var(--error-color);
+    padding: 15px;
+}
+
+.form-control.error input {
+    margin-bottom: 2px;
+}
+
+.btn-submit-log {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background: var(--black-color);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 0;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Merriweather', sans-serif;
+}
+
+.btn-submit-log:hover {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+.signin-link {
+    text-align: center;
+    cursor: pointer;
+}
+
+.signin-link a {
+    color: var(--black-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
+
+.signup-link {
+    text-align: center;
+    cursor: pointer;
+}
+
+.yang-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 10px;
+    /* width: 800px; */
+}
+
+.btn-submit {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background: var(--black-color);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 0;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Merriweather', sans-serif;
+}
+
+.signup-link a {
+    color: var(--black-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+#btn-change{
+    display: none;
+}
+#btn-change{
+    display: inline-block;
+    width: 15px;
+} 
+#label-show-pw{
+    display: inline-block;
+}
+#btn-change, #label-show-pw{
+    margin: 0px;
+    padding: 0px;
+    height: 25px;
+    line-height: 25px;
+}
+.show-pw-container{
+    display: block;
+    height: 30px;
+    line-height: 25px;
+}
+
+
+.hau-product-info-sell{
+    display: block;
+}
+.hau-product-name{
+    font-size: 20px;
+    font-weight: 700;
+}
+.hau-product-price{
+    font-size: 15px;
+    font-weight: 700;
+    color:#ff0099
+}
+.hau-product-image-holder{
+    width: 90%;
+    display: block;
+}
+.hau-product-image-holder div{
+    display: inline;
+
+}
+.hau-product-image{
+    width: 25%;
+    display: inline-block;
+    transition: all 0.3s ease-in;
+}
+
+
+.hau-product-image-show{
+    display: none;
+    width: 0px;
+}
+
+.hau-product-image:hover ~ .hau-product-image-show{
+    position: absolute; 
+    bottom: 100%;
+    left: 0px; 
+    display: block;
+    width: 100%;
+    box-shadow: #999 5px 5px;
+    border: #ff0099 2px solid;
+    border-radius: 5px;
+}
+.hau-product-image:hover{
+    width: 30%;
+}
+
+
+.product-sell-container{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    row-gap: auto;
+    column-gap: 2%;
+}
+.hau-sell-product-detail{
+    display:none;
+}
+.hau-sell-product-detail > *{
+    display: block;
+    font-size: 15px;
+    padding: 5px;
+}
+.hau-sell-product-item {
+    position: relative;
+    border: #000 1px solid;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 5px;
+    box-shadow: #999 5px 5px 0px;
+    height: 60vh;
+}
+.hau-product-teaser-info{
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+
+.hau-product-image-teaser{
+    width: 90%;
+    max-width: 250px;
+}
+
+.hau-sell-product-item:hover > .hau-sell-product-detail {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    top: 10%;
+    left: 10%;
+    width: 300px;
+    display: block;
+    border-radius: 10px;
+    z-index: 10;
+}
+.hau-header{
+    /* position: sticky; */
+    top: 0px;
+    z-index: 10;;
+}
+
+.hau-func-btn{
+    padding: 8px 16px;
+    margin: 2px;
+}
+
+.account-function ul, .account-function li {
+    padding: 0;
+    margin: 0;
+}
+
+.hau-pagination-container{
+    padding: 0;
+    margin: 5px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.hau-pagination-container *{
+    margin: 5px;
+}
+
+.current-brand{
+    background-color: #ff0099;
+    color: white;
+}
+
+#modal{
+    position: absolute;
+    top: 0px;
+    z-index: 25;
+}
+
+.hau-cart-container{
+    background-color: rgba(12, 72, 123, 0.44);
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    overflow-y: scroll;
+}
+.hau-cart-item{
+    background-color:  rgba(12, 72, 123, 0.8);
+    margin-left: auto;
+    margin-right: 0px;
+    margin-top: 5px;
+    width: 30%;
+    max-width: 300px;
+    min-width: 200px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.hau-cart-item img{
+    width: 80%;
+    margin-left: 10%;
+}
+.hau-cart-item input[type="number"]{
+    width: 50px;
+    height: 35px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+.hau-checkbox-func{
+    width: 20px;
+    height: 20px;
+}

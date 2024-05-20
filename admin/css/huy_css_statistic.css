@@ -1,0 +1,162 @@
+html, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Avenir Next', Arial, Helvetica, sans-serif;
+}
+canvas {
+  margin: 0 auto;
+}
+*{
+  box-sizing: border-box;
+}
+.huy-statistic-button {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.huy-statistic-button button {
+  padding: 10px;
+  margin: 20px;
+  font-size: 22px;
+}
+.huy-date-picker, .huy-year-picker {
+  /* display: flex; */
+  display: none;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  font-weight: 638;
+  color: #070d2c; 
+}
+.huy-date-picker.huy-date-picker-on {
+  display: flex;
+}
+.huy-year-picker.huy-year-picker-on {
+  display: flex;
+}
+.huy-date-picker input, .huy-date-picker button, .huy-year-picker input, .huy-year-picker button {
+  margin-right: 15px;
+  border: #070d2c 1px solid;
+  border-radius: 8px;
+}
+.huy-table-header-statistic-revenue, .huy-table-header-statistic-product {
+  display: none;
+  height: 50px;
+  align-items: center;
+  margin-bottom: 2px;
+  position: sticky;
+  text-transform: uppercase;
+  top: 0%;
+  border: #070d2c 1px solid;
+  z-index: 3;
+  color: white;
+  font-weight: 638;
+  background-color: #19979b;
+}
+.huy-table-item-revenue {
+  display: none;
+  grid-template-columns: auto 20% 25% 25% 25%;
+  height: 50px;
+  align-items: center;
+  margin-bottom: 2px;
+  position: sticky;
+  text-transform: uppercase;
+  top: 0%;
+  border: #070d2c 1px solid;
+  z-index: 3;
+  color: white;
+  font-weight: 638;
+  background-color: #19979b;
+}
+.huy-table-item-product {
+  display: none;
+  grid-template-columns: auto 40% 15% 15% 20%;
+  height: 50px;
+  align-items: center;
+  margin-bottom: 2px;
+  position: sticky;
+  text-transform: uppercase;
+  top: 0%;
+  border: #070d2c 1px solid;
+  z-index: 3;
+  color: white;
+  font-weight: 638;
+  background-color: #19979b;
+}
+.huy-table-item-revenue.huy-table-item-revenue-on {
+  display: grid;
+}
+.huy-table-item-product.huy-table-item-product-on {
+  display: grid;
+}
+.huy-table-item-revenue * {
+  margin-left: 110px;
+}
+.huy-table-item-product * {
+  margin-left: 110px;
+}
+.huy-table-header-statistic-revenue {
+  grid-template-columns: auto 20% 25% 25% 25%;
+}
+.huy-table-header-statistic-revenue.huy-table-header-statistic-revenue-on {
+  display: grid;
+}
+.huy-table-header-statistic-product {
+  grid-template-columns: auto 40% 15% 15% 20%;
+}
+.huy-table-header-statistic-product.huy-table-header-statistic-product-on {
+  display: grid;
+}
+.huy-table-header-statistic-revenue * {
+  margin-left: 100px;
+}
+.huy-table-header-statistic-product * {
+  margin-left: 100px;
+}
+.huy-graph-revenue {
+  display: none;
+  margin-top: 50px;
+  width: 90%;
+}
+.huy-table-revenue {
+  height: 60% !important;
+  margin-left: 15%;
+}
+.huy-table-revenue, .huy-table-revenue tr th, td {
+  border: cadetblue 2px solid;
+  text-align: center;
+  border-spacing: 0;
+}
+.huy-graph-revenue.huy-graph-revenue-on {
+  display: block;
+}
+.huy-button-statistic-product, .huy-button-statistic-revenue, .huy-button-statistic-revenue-year {
+  background-color: #19979b;
+  border-radius: 10px;
+  color: white;
+  font-weight: 638;
+  border: #070d2c 1px solid;
+}
+.huy-button-statistic-product:hover, .huy-button-statistic-revenue:hover, .huy-button-statistic-revenue-year:hover {
+  background-color: red;
+  border-radius: 10px;
+  color: white;
+  font-weight: 638;
+  border: #070d2c 1px solid;
+}
+.huy-table-statistic-revenue {
+  overflow-y: scroll;
+}
+.huy-table-statistic-product {
+  overflow-y: scroll;
+}
+#huyChart {
+  width: 70% !important;
+  height: 80% !important;
+}
+.huy-content{
+  height: 60%;
+  overflow-y: scroll;
+}

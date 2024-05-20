@@ -1,0 +1,274 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+div {
+  position: relative;
+}
+.huy-container-info-pd {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.huy-container-qty-pd {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+.huy-container-info-pd.huy-container-info-pd-none {
+  display: none;
+}
+.huy-container-qty-pd.huy-container-qty-pd-active {
+  display: block;
+}
+.huy-all-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.huy-frame-qty-pd {
+  position: relative;
+  left: 30%;
+  top: 30%;
+  bottom: 30%;
+  right: 30%;
+  border-radius: 12px;
+  border-style: groove;
+  width: 40%;
+  height: 40%;
+}
+.huy-frame-cate-qty-pd {
+  position: relative;
+  overflow-y: scroll;
+  border-radius: 12px;
+  border-style: groove;
+  width: 95%;
+  height: 80%;
+  left: 2%;
+  top: 3%;
+}
+.huy-active-frame-qty-pd {
+  position: relative;
+  display: flex;
+}
+.huy-cate-pd {
+  margin-top: 4%;
+  margin-left: 20%;
+}
+.huy-number-pd {
+  position: absolute;
+  margin-top: 4%;
+  margin-left: 60%;
+}
+.huy-all-frame.huy-close-all-frame {
+  display: none;
+}
+.huy-frame-edit-product {
+  position: relative;
+  left: 25%;
+  top: 25%;
+  bottom: 25%;
+  right: 25%;
+  border-radius: 12px;
+  border-style: groove;
+  width: 55%;
+  height: 50%;
+}
+.huy-frame-upload-img {
+  position: relative;
+  left: 2%;
+  top: 2%;
+  border-radius: 12px;
+  border-style: groove;
+  width: 30%;
+  height: 70%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 10%;
+}
+.huy-button-upload {
+  position: absolute;
+  left: 9.5%;
+  right: 30%;
+  width: 16%;
+  bottom: 20%;
+}
+.huy-text-no-file {
+  position: absolute;
+  display: block;
+  font-size: 17px;
+  width: 100%;
+  height: 20%;
+  top: 65%;
+  text-align: center;
+}
+.huy-icon-upload-img {
+  position: absolute;
+  display: block;
+  left: 25%;
+  top: 10%;
+  width: 50%;
+  height: 60%;
+}
+.huy-text-no-file.huy-text-no-file-none {
+  display: none;
+}
+.huy-icon-upload-img.huy-icon-upload-img-none {
+  display: none;
+}
+.huy-icon-close-img {
+  position: absolute;
+  left: 87%;
+  top: 5%;
+  width: 10%;
+  height: 10%;
+  display: none;
+  cursor: pointer;
+  background-color: blue;
+  border-radius: 100%;
+}
+.huy-active-frame-img:hover .huy-icon-close-img {
+  display: block;
+}
+.huy-frame-upload-img .huy-icon-close-img:hover {
+  background-color: red;
+}
+.huy-output-img {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  gap: 5%;
+  padding: 1% 0;
+}
+.huy-my-upload-img {
+  height: 90%;
+  border: 1px solid black;
+}
+.huy-text-name-pd {
+  position: absolute;
+  left: 35%;
+  top: 10%;
+  right: 40%;
+}
+.huy-input-name-pd {
+  position: absolute;
+  left: 35%;
+  top: 15%;
+  right: 40%;
+}
+.huy-text-price-pd {
+  position: absolute;
+  left: 65%;
+  top: 10%;
+  right: 10%;
+}
+.huy-input-price-pd {
+  position: absolute;
+  left: 65%;
+  top: 15%;
+  right: 10%;
+}
+.huy-text-switch-pd {
+  position: absolute;
+  left: 35%;
+  top: 25%;
+  right: 40%;
+}
+.huy-switch-checkbox {
+  position: absolute;
+  left: 49%;
+  top: 25%;
+  right: 1%;
+  border: 1px solid grey;
+}
+.huy-text-connect-pd {
+  position: absolute;
+  left: 35%;
+  top: 35%;
+  right: 40%;
+}
+.huy-connect-checkbox {
+  position: absolute;
+  left: 49%;
+  top: 35%;
+  right: 1%;
+  border: 1px solid grey;
+}
+.huy-text-led-pd {
+  position: absolute;
+  left: 35%;
+  top: 45%;
+  right: 40%;
+}
+.huy-led-checkbox {
+  position: absolute;
+  left: 49%;
+  top: 45%;
+  right: 1%;
+  border: 1px solid grey;
+}
+.huy-text-brand-pd {
+  position: absolute;
+  left: 35%;
+  top: 55%;
+  right: 40%;
+}
+#huy-brand {
+  position: absolute;
+  left: 49%;
+  top: 55%;
+  right: 25%;
+}
+.huy-add-brand {
+  position: absolute;
+  left: 80%;
+  top: 54.5%;
+  right: 11%;
+}
+.huy-text-description-pd {
+  position: absolute;
+  left: 35%;
+  top: 65%;
+  right: 40%;
+}
+.huy-input-description-pd {
+  position: absolute;
+  left: 49%;
+  top: 65%;
+  right: 25%;
+  max-width: 49.5%;
+  max-height: 22%;
+  min-width: 49.5%;
+  min-height: 22%;
+}
+.huy-button-cancel-frame-qty {
+  position: absolute;
+  top: 90%;
+  left: 66%;
+  right: 23%;
+}
+.huy-button-accept-frame-qty {
+  position: absolute;
+  top: 90%;
+  left: 80%;
+  right: 10%;
+}
+.huy-button-addqty-pd {
+  position: absolute;
+  left: 49%;
+  top: 90%;
+}
+.huy-button-cancel {
+  position: absolute;
+  top: 90%;
+  left: 80%;
+  right: 12%;
+}
+.huy-button-accept {
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  right: 2%;
+}
